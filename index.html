@@ -1,175 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Redirect Page</title>
-  <style>
-    body {
-      text-align: center;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #4facfe, #00f2fe);
-      color: white;
-      margin: 0;
-      padding: 20px;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: rgba(255,255,255,0.1);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    }
-    h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-    #redirectBtn {
-      background: #ff5722;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 8px;
-      font-size: 18px;
-      cursor: not-allowed;
-      margin-top: 20px;
-      transition: background 0.3s;
-    }
-    #redirectBtn.active {
-      cursor: pointer;
-      background: #28a745;
-    }
-    #redirectBtn.active:hover {
-      background: #218838;
-    }
-    .ads {
-      margin: 25px 0;
-      padding: 10px;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 10px;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tinywow — Free Online Creator & Productivity Tools — 3mar Network</title>
+  <meta name="description" content="Overview of Tinywow — a suite of free online tools for creators and productivity. What it does, use-cases, privacy notes and tips." />
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6242746417031662"
      crossorigin="anonymous"></script>
-       <!-- Popunder -->
-  <script type='text/javascript' src='//timesmonarchcivil.com/3c/8b/dd/3c8bdd6f292f6c7220331d28898e31d9.js'></script>  
-     
+     <script type='text/javascript' src='//timesmonarchcivil.com/3c/8b/dd/3c8bdd6f292f6c7220331d28898e31d9.js'></script>
 </head>
 <body>
-  <div class="container">
-    <h2>🚀 You're being redirected...</h2>
-    <p id="countdown">Redirect button will be available in 5 seconds</p>
-    <button id="redirectBtn" disabled>Redirect</button>
+  <header class="topbar">
+    <div class="brand"><span class="logo">3M</span><span class="brand-text">3mar Network</span></div>
+    <button id="menuBtn" class="menu-btn" aria-label="Open menu">☰</button>
+  </header>
 
-    <!-- Banner Ads -->
-    <div class="ads banner">
-      <!-- Banner 468×60 -->
-      <script type="text/javascript">
-        atOptions = {
-          'key' : '4d58868d7ececb9e7c7af77d0a62171c',
-          'format' : 'iframe',
-          'height' : 60,
-          'width' : 468,
-          'params' : {}
-        };
-      </script>
-      <script type="text/javascript" src="//timesmonarchcivil.com/4d58868d7ececb9e7c7af77d0a62171c/invoke.js"></script>
-    </div>
+  <aside id="sideMenu" class="side-menu" aria-hidden="true">
+    <button id="closeMenu" class="close-menu" aria-label="Close menu">✕</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="top5_movies&tvshos_apps.html">🎞 Top 5</a></li>
+        <li><a href="request.html">✉️ Request</a></li>
+        <li><a href="donate.html">💖 Donate</a></li>
+        <li><a href="contact.html">📞 Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
 
-    <div class="ads banner">
-      <!-- Banner 728×90 -->
-      <script type="text/javascript">
-        atOptions = {
-          'key' : '1896160c5b7396d353e27af8485a6b57',
-          'format' : 'iframe',
-          'height' : 90,
-          'width' : 728,
-          'params' : {}
-        };
-      </script>
-      <script type="text/javascript" src="//timesmonarchcivil.com/1896160c5b7396d353e27af8485a6b57/invoke.js"></script>
-    </div>
+  <main class="container">
+    <article class="hero card">
+      <h1>Tinywow — Free Online Tools for Creators & Productivity</h1>
+      <p class="lead">Tinywow offers a collection of lightweight, browser-based utilities — from PDF and image tools to format converters and quick editing helpers — designed for fast, no-install workflows.</p>
 
-    <div class="ads banner">
-      <!-- Banner 300×250 -->
-      <script type="text/javascript">
-        atOptions = {
-          'key' : '6348a3ff0c25858f661070cc53058183',
-          'format' : 'iframe',
-          'height' : 250,
-          'width' : 300,
-          'params' : {}
-        };
-      </script>
-      <script type="text/javascript" src="//timesmonarchcivil.com/6348a3ff0c25858f661070cc53058183/invoke.js"></script>
-    </div>
-  </div>
-
-
-
-  <!-- Social Bar -->
-  <script type='text/javascript' src='//timesmonarchcivil.com/cd/1a/d2/cd1ad2038856f1f3c813a41c3c40d468.js'></script>  
-
-  <script>
-    // countdown timer
-    let timeLeft = 5;
-    const countdownEl = document.getElementById("countdown");
-    const redirectBtn = document.getElementById("redirectBtn");
-
-    const timer = setInterval(() => {
-      timeLeft--;
-      countdownEl.textContent = `Redirect button will be available in ${timeLeft} seconds`;
-      if (timeLeft <= 0) {
-        clearInterval(timer);
-        countdownEl.textContent = "You can now click the button.";
-        redirectBtn.disabled = false;
-        redirectBtn.classList.add("active");
-        redirectBtn.onclick = (e) => {
-          e.stopPropagation(); // منع فتح smartlink عند الضغط على الزر
-          window.location.href = "https://tinywow.com/";
-        };
-      }
-    }, 1000);
-
-    // Smartlink logic (once only)
-    let smartlinkOpened = false;
-    document.body.addEventListener("click", function(e) {
-      const target = e.target;
-
-      if (
-        target.id === "redirectBtn" ||
-        target.closest(".banner")
-      ) {
-        return;
-      }
-
-      if (!smartlinkOpened) {
-        smartlinkOpened = true;
-        window.open("https://timesmonarchcivil.com/xava742ge4?key=e36e1ce86397b1eb530fbfa792c9d175", "_blank");
-      }
-    });
-  </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6242746417031662"
-     crossorigin="anonymous"></script>
-<!-- Square ad -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-6242746417031662"
-     data-ad-slot="3347075104"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+      <div class="ad-slot ad-top">
+<script type="text/javascript">
+	atOptions = {
+		'key' : '1896160c5b7396d353e27af8485a6b57',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
 </script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6242746417031662"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="autorelaxed"
-     data-ad-client="ca-pub-6242746417031662"
-     data-ad-slot="7469975335"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+<script type="text/javascript" src="//timesmonarchcivil.com/1896160c5b7396d353e27af8485a6b57/invoke.js"></script>
+      </div>
+    </article>
+
+    <section class="card article-body">
+      <h2>What is Tinywow?</h2>
+      <p>Tinywow is a web-based collection of free utilities that help with common content and productivity tasks. Instead of installing software, you use Tinywow in the browser to do things like convert file formats, extract pages from PDFs, resize images, remove backgrounds, and more — all through simple, focused tools.</p>
+
+      <div class="ad-slot ad-inline">
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'd0f0078beb2cea572108ad788c9107c6',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
 </script>
+<script type="text/javascript" src="//timesmonarchcivil.com/d0f0078beb2cea572108ad788c9107c6/invoke.js"></script>
+      </div>
+
+      <h3>Why use Tinywow?</h3>
+      <ul>
+        <li><strong>No install:</strong> Everything runs in the browser — useful on phones, Chromebooks and locked-down machines.</li>
+        <li><strong>Fast and focused:</strong> Tools are single-purpose and quick to use for one-off tasks.</li>
+        <li><strong>Free tier:</strong> Many tools are available at no cost for casual users.</li>
+        <li><strong>Good for creators:</strong> Handy for quick edits, conversions, and prepping assets for thumbnails, uploads, or sharing.</li>
+      </ul>
+
+      <div class="ad-slot ad-inline">
+<script type="text/javascript">
+	atOptions = {
+		'key' : '4d58868d7ececb9e7c7af77d0a62171c',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//timesmonarchcivil.com/4d58868d7ececb9e7c7af77d0a62171c/invoke.js"></script>
+      </div>
+
+      <h3>Common Tools You’ll Find</h3>
+      <p>Rather than an exhaustive list, here are the types of utilities Tinywow typically provides:</p>
+      <ol>
+        <li>PDF tools — merge, split, compress, rotate, convert to/from Word or images.</li>
+        <li>Image helpers — resize, crop, convert format, background removal.</li>
+        <li>Video & audio helpers — convert formats, trim, or extract audio (quick jobs).</li>
+        <li>Text & document converters — extract text, convert between document formats.</li>
+        <li>Developer & file utilities — change file extensions, decode/encode, and more.</li>
+      </ol>
+
+      <div class="ad-slot ad-mid">
+<script type="text/javascript">
+	atOptions = {
+		'key' : '6348a3ff0c25858f661070cc53058183',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//timesmonarchcivil.com/6348a3ff0c25858f661070cc53058183/invoke.js"></script>
+      </div>
+
+      <h3>How to Use It Safely</h3>
+      <p>Tinywow is convenient for quick tasks, but consider these practical safety tips before uploading files:</p>
+      <ul>
+        <li><strong>Don’t upload sensitive data:</strong> Avoid using online converters for confidential documents (bank statements, IDs, private contracts) unless you trust the service’s data handling policy.</li>
+        <li><strong>Check file retention:</strong> Look for any stated auto-delete or retention policy on the site if privacy matters to you.</li>
+        <li><strong>Scan downloads:</strong> After processing, scan any downloaded files if they will be re-used on production systems.</li>
+      </ul>
+
+      <div class="ad-slot ad-inline">
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'd0f0078beb2cea572108ad788c9107c6',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//timesmonarchcivil.com/d0f0078beb2cea572108ad788c9107c6/invoke.js"></script>
+      </div>
+
+      <h3>Who benefits most?</h3>
+      <p>Tinywow is ideal for creators, social media managers, students, and anyone who needs occasional, fast file conversions or small edits without installing dedicated apps. It’s particularly handy on devices where installing desktop software isn’t practical.</p>
+
+      <h3>Quick Tips</h3>
+      <ul>
+        <li>For repetitive, heavy workflows consider using desktop apps or automated scripts; browser tools are best for one-off tasks.</li>
+        <li>When removing backgrounds from images, verify the result at full resolution before using in final assets.</li>
+        <li>If a file is large, consider compressing it first or use a Wi-Fi connection to speed uploads/downloads.</li>
+      </ul>
+
+      <div class="divider"></div>
+
+      <h3>Other resources</h3>
+      <div class="topics-grid small">
+        <a class="card" href="thumbnails.html">How to Make Thumbnails That Click</a>
+        <a class="card" href="top-tools-for-creators.html">Top Tools for Creators</a>
+        <a class="card" href="best-vpns-for-streaming.html">Best VPNs for Streaming</a>
+        <a class="card" href="build-android-app.html">Guide: Build a Simple Android App</a>
+      </div>
+
+      <div class="ad-slot ad-bottom">
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'a32a15411dfa08da3973f545695e1d27',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//timesmonarchcivil.com/a32a15411dfa08da3973f545695e1d27/invoke.js"></script>
+      </div>
+
+      <div class="cta-row" style="margin-top:20px;">
+        <p style="margin-bottom:8px;">Visit Tinywow to try the full set of tools:</p>
+        <a class="btn large" href="https://tinywow.com/" target="_blank" rel="noopener">Go to Tinywow</a>
+      </div>
+
+    </section>
+
+    <footer class="site-footer"><div>© 3mar Network • 2025</div><div class="links"><a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a></div></footer>
+  </main>
+
+  <script type='text/javascript' src='//timesmonarchcivil.com/8c/c8/71/8cc871ca93c902762b15636b3ac7e680.js'></script>
+  <script type='text/javascript' src='//timesmonarchcivil.com/cd/1a/d2/cd1ad2038856f1f3c813a41c3c40d468.js'></script>
 </body>
 </html>
